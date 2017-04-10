@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthDialogView" customModule="GenQuizitive" customModuleProvider="target">
+            <connections>
+                <outlet property="spinner" destination="ja3-WX-jVh" id="rgT-kp-6yM"/>
+                <outlet property="webView" destination="zXw-bB-UiS" id="gXo-71-R1o"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-JR-RqW">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Login" id="owj-sC-fNb">
+                            <barButtonItem key="leftBarButtonItem" title="&lt; Cancel" id="ivf-9b-je1">
+                                <connections>
+                                    <action selector="cancelBtnClicked:" destination="-1" id="PlZ-Co-g4v"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXw-bB-UiS">
+                    <rect key="frame" x="0.0" y="44" width="320" height="504"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <dataDetectorType key="dataDetectorTypes"/>
+                </webView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ja3-WX-jVh">
+                    <rect key="frame" x="150" y="274" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kFq-JR-RqW" firstAttribute="trailing" secondItem="zXw-bB-UiS" secondAttribute="trailing" id="50Y-X0-9Y0"/>
+                <constraint firstItem="kFq-JR-RqW" firstAttribute="leading" secondItem="zXw-bB-UiS" secondAttribute="leading" id="6pP-vg-Zzr"/>
+                <constraint firstItem="zXw-bB-UiS" firstAttribute="top" secondItem="kFq-JR-RqW" secondAttribute="bottom" id="7fV-bV-7Mw"/>
+                <constraint firstItem="ja3-WX-jVh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="90U-Uq-Lmb"/>
+                <constraint firstItem="kFq-JR-RqW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HUV-Km-gga"/>
+                <constraint firstAttribute="bottom" secondItem="zXw-bB-UiS" secondAttribute="bottom" constant="20" id="dse-uy-jkn"/>
+                <constraint firstItem="kFq-JR-RqW" firstAttribute="centerX" secondItem="ja3-WX-jVh" secondAttribute="centerX" id="ivU-8c-FZS"/>
+                <constraint firstItem="kFq-JR-RqW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ml7-EU-YKl"/>
+                <constraint firstAttribute="trailing" secondItem="kFq-JR-RqW" secondAttribute="trailing" id="zIk-Yn-4DN"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
